@@ -1,0 +1,69 @@
+:root {
+  --bg: #ffffff;
+  --bg-soft: #F6F5FF;
+  --ink: #14131A;
+  --ink-soft: #6B6875;
+  --ink-faint: #A6A3B0;
+  --accent: #4433FF;
+  --accent-dark: #2E22B8;
+  --accent-soft: #ECEAFF;
+  --lime: #C8FF4D;
+  --border: #E7E5F0;
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+::selection {
+  background: var(--lime);
+  color: var(--ink);
+}
+
+.wrap {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+section {
+  position: relative;
+}
+
+/* dipakai oleh directive v-reveal, lihat src/directives/reveal.js */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
